@@ -1,0 +1,25 @@
+// --------------------
+// BACKGROUND
+// --------------------
+body { background-color: #1AA1AD; }
+
+.bg-pattern {
+    z-index: 0;
+    position: absolute;
+    width: 1377px;
+
+    &.top {
+        left: -1377px + (1377px / 2);
+        top: -1377px + (1377px / 2);
+        // transform: scale(2);
+    }
+    
+    &.bottom {
+        // display: none;
+        // right: -50%;
+        // bottom: -50%;
+        right: -1377px + (1377px / 2);
+        bottom: -1377px + (1377px / 2);
+        // transform: scale(2);
+    }
+}

@@ -1,0 +1,16 @@
+// --------------------
+// ATTRIBUTIONS
+// --------------------
+.attribution {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+
+    font-size: 11px;
+    text-align: center;
+    color: $textPrimary;
+    
+    // a { color: hsl(228, 45%, 44%); }
+    a { color: lighten($color: $darkCyan, $amount: 20); }
+}

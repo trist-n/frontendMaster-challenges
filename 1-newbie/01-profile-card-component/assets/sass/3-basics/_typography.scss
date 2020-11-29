@@ -1,0 +1,27 @@
+// --------------------
+// TYPOGRAPHY
+// --------------------
+// Import Kumbh Sans from Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    // line-height: 1.5;
+    color: $textPrimary;
+}
+
+strong { font-weight: 700; }
+span.dimmed { color: $textSecondary; }
+p {
+    &.small { font-size: 14px; }
+    &.x-small { font-size: 11px; }
+    &.bold { font-weight: 700; }
+    &.dimmed { color: $textSecondary; }
+}

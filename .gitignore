@@ -15,7 +15,9 @@
 .DS_Store
 
 .prettierignore
+.sass-cache
 
 # Ignore instruction and files
 instructions
 challenge-files
+resources

@@ -1,0 +1,14 @@
+// --------------------
+// MIXINS
+// --------------------
+@mixin borderRadius($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin boxShadow($x, $y, $blur, $spread, $tint, $opacity) {
+    box-shadow: $x $y $blur $spread rgba($color: $tint, $alpha: $opacity);
+    -webkit-box-shadow: $x $y $blur $spread rgba($color: $tint, $alpha: $opacity);
+    -moz-box-shadow: $x $y $blur $spread rgba($color: $tint, $alpha: $opacity);
+}
