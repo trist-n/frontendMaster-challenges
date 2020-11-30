@@ -27,29 +27,27 @@ main {
     }
 
     header.card-header {
-        position: relative;
-        // height: 188px;
-        height: 140px;
-        // padding: 24px;
-        margin-bottom: (96px + 10px) / 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 193px; // 188px + 5px from profile image border
 
-        background: url('../images/patterns/bg-pattern-card.svg') repeat $darkCyan;
-
-        img {
-            height: 96px + 10px; // 96px + 5px * 2 of border
-            width: 96px + 10px;
-            // !!!!!!!!!! Check for another solution !!!!!!!!!!
-            position: absolute;
-            bottom: 0 - ( (96px + 10px) / 2 );
-            left: ( $cardWidth / 2 ) - ( (96px + 10px) / 2 );
-            @include breakpoint( xs ) {
-                left: ( $cardWidthMobile / 2 ) - ( (96px + 10px) / 2 );
-            }
-            // !!!!!!!!!!
-            justify-self: center;
-            border: 5px solid $white;
-            @include borderRadius(100%);
+        .header-banner {
+            height: 140px;
         }
+
+        .header-profile {
+            height: 96px + 10px;
+            margin-top: -(96px + 10px) /2; // 96px + 5px * 2 of border
+            
+            img.profile-photo {
+                width: 100%;
+                height: 100%;
+                border: 5px solid $white;
+                @include borderRadius(50%);
+            }
+        }
+
     }
 
     .card-content {
