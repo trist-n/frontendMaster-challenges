@@ -9,8 +9,8 @@
 
     font-size: 11px;
     text-align: center;
-    color: $textPrimary;
+    color: #000;
     
     // a { color: hsl(228, 45%, 44%); }
-    a { color: lighten($color: $darkCyan, $amount: 20); }
+    a { color: lighten($color: blue, $amount: 20); }
 }

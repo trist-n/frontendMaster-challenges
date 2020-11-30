@@ -1,0 +1,66 @@
+// --------------------------------------------------
+// LAYOUT - BREAKPOINTS
+// --------------------------------------------------
+// SCREEN SIZES
+$screen-xs: 767px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+// BREAKPOINTS MIXIN
+@mixin breakpoint( $class ) {
+    // Default if mobile first
+    @if $class == xs {
+        @media screen and (max-width: $screen-xs) { @content; }
+    }
+    @else if $class == sm {
+        @media screen and (min-width: $screen-sm) { @content; }
+    }
+    @else if $class == md {
+        @media screen and (min-width: $screen-md) { @content; }
+    }
+    @else if $class == lg {
+        @media screen and (min-width: $screen-lg) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+@mixin breakpoint-minmax( $class ) {
+    // Default if mobile first
+    @if $class == xs {
+        @media screen and (max-width: $screen-xs) { @content; }
+    }
+    @else if $class == sm {
+        @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1px) { @content; }
+    }
+    @else if $class == md {
+        @media screen and (min-width: $screen-md) and (max-width: $screen-lg - 1px) { @content; }
+    }
+    @else if $class == lg {
+        @media screen and (min-width: $screen-lg) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}
+
+@mixin breakpoint-max( $class ) {
+    // Default if mobile first
+    @if $class == xs {
+        @media screen and (max-width: $screen-xs) { @content; }
+    }
+    @else if $class == sm {
+        @media screen and (max-width: $screen-md - 1px) { @content; }
+    }
+    @else if $class == md {
+        @media screen and (max-width: $screen-lg - 1px) { @content; }
+    }
+    @else if $class == lg {
+        @media screen and (min-width: $screen-lg) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+}

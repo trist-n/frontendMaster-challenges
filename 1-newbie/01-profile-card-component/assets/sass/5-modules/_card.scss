@@ -2,6 +2,7 @@
 // CARD
 // --------------------
 $cardWidth: 350px;
+$cardWidthMobile: 326px;
 
 body, html { height: 100%; }
 main {
@@ -15,10 +16,15 @@ main {
     z-index: 1;
     background-color: $white;
     width: $cardWidth;
-    max-width: 350px;
+    max-width: $cardWidth;
     @include borderRadius(14px);
     overflow: hidden;
     @include boxShadow(0px, 26px, 32px, 6px, $textPrimary, 0.25);
+
+    @include breakpoint( xs ) {
+        width: $cardWidthMobile;
+        max-width: $cardWidthMobile;
+    }
 
     header.card-header {
         position: relative;
@@ -27,15 +33,18 @@ main {
         // padding: 24px;
         margin-bottom: (96px + 10px) / 2;
 
-        background: url('../images/bg-pattern-card.svg') repeat $darkCyan;
+        background: url('../images/patterns/bg-pattern-card.svg') repeat $darkCyan;
 
         img {
-            position: absolute;
             height: 96px + 10px; // 96px + 5px * 2 of border
             width: 96px + 10px;
-            bottom: 0 - ( (96px + 10px) / 2 );
             // !!!!!!!!!! Check for another solution !!!!!!!!!!
+            position: absolute;
+            bottom: 0 - ( (96px + 10px) / 2 );
             left: ( $cardWidth / 2 ) - ( (96px + 10px) / 2 );
+            @include breakpoint( xs ) {
+                left: ( $cardWidthMobile / 2 ) - ( (96px + 10px) / 2 );
+            }
             // !!!!!!!!!!
             justify-self: center;
             border: 5px solid $white;
